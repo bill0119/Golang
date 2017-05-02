@@ -7,7 +7,9 @@ import (
 
 func init() {
 	fmt.Printf("main initial...\n")
-	control.Control()
+	control.ControlInit()
+	ctrl := control.GetControl()
+	fmt.Println(ctrl)
 }
 
 func main() {

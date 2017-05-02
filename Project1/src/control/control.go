@@ -4,6 +4,17 @@ import (
 	"fmt"
 )
 
-func Control() {
+type Control struct{
+}
+
+var(
+	ctrl Control
+)
+
+func ControlInit() {
 	fmt.Printf("Control initial...\n")
+}
+
+func GetControl()(Control) {
+	return ctrl
 }

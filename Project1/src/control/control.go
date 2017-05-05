@@ -1,20 +1,23 @@
 package control
 
 import (
+	"config"
 	"fmt"
 )
 
-type Control struct{
+type Control struct {
 }
 
-var(
-	ctrl Control
+var (
+	Ctrl Control
 )
 
 func ControlInit() {
 	fmt.Printf("Control initial...\n")
+	conf := config.GetWebConfig()
+	fmt.Println(conf)
 }
 
-func GetControl()(Control) {
-	return ctrl
+func GetControl() *Control {
+	return &Ctrl
 }

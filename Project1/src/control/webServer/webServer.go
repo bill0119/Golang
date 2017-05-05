@@ -21,7 +21,7 @@ func StopServer() {
 
 }
 
-func StartServer(httpPort int) {
+func StartServer(conf *WebConfig) {
 	beego.Router("/", &BeeferController{})
-	beego.Run(":" + strconv.Itoa(httpPort))
+	beego.Run(":" + strconv.Itoa(conf.HttpPort))
 }

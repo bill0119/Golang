@@ -1,9 +1,8 @@
 package control
 
 import (
-	"config"
+	"control/webServer"
 	"fmt"
-	"webServer"
 )
 
 type Control struct {
@@ -15,9 +14,9 @@ var (
 
 func ControlInit() {
 	fmt.Printf("Control initial...\n")
-	conf := config.GetWebConfig()
-	fmt.Println(conf)
-	webServer.StartServer(conf.HttpPort)
+	webConf := webServer.GetWebConfig()
+	fmt.Println(webConf)
+	webServer.StartServer(webConf)
 }
 
 func GetControl() *Control {

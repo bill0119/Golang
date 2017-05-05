@@ -4,10 +4,13 @@ import (
 	"control/webServer"
 )
 
-type ControlConfig struct {
-	WebConfig webServer.WebConfig
+type Control struct {
+	Web webServer.WebServer
 }
 
 var (
-	CtrlConf ControlConfig
+	Ctrl Control
 )
+
+func init() {
+}

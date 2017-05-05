@@ -5,13 +5,6 @@ import (
 	"fmt"
 )
 
-type Control struct {
-}
-
-var (
-	Ctrl Control
-)
-
 func ControlInit() {
 	fmt.Printf("Control initial...\n")
 	webConf := webServer.GetWebConfig()

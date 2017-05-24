@@ -2,6 +2,8 @@ package webServer
 
 import (
 	"fmt"
+	"os"
+	"io/ioutil"
 	"github.com/astaxie/beego"
 	"strconv"
 )
@@ -15,19 +17,24 @@ type WebServer struct {
 }
 
 func (c *BeeferController) Get() {
-	c.Ctx.WriteString("Hello Beego")
+	execDirAbsPath, _ := os.Getwd()
+	data, err := ioutil.ReadFile(execDirAbsPath + "/web/html/index.html")
+	if err != nil {
+		panic(err)
+	}
+	c.Ctx.WriteString(string(data))
 }
 
 func init() {
 
 }
 
-func StopServer() {
-
-}
-
 func StartServer(conf *WebConfig) {
 	fmt.Printf("Web server is listening port %d\n", conf.HttpPort)
+
+	//router
 	beego.Router("/", &BeeferController{})
+
+
 	beego.Run(":" + strconv.Itoa(conf.HttpPort))
 }

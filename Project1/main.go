@@ -7,9 +7,10 @@ import (
 
 func init() {
 	fmt.Printf("main initial...\n")
+	//ctrl := control.GetControl()
+	//fmt.Println(ctrl)
+
 	control.ControlInit()
-	ctrl := control.GetControl()
-	fmt.Println(ctrl)
 }
 
 func main() {

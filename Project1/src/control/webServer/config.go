@@ -17,3 +17,4 @@ func init() {
 func GetWebConfig() *WebConfig {
 	return &WebConf
 }
+

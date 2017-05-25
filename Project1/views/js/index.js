@@ -1,0 +1,5 @@
+
+function Test() {
+	alert('Test...');
+}
+

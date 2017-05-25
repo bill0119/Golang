@@ -2,8 +2,6 @@ package webServer
 
 import (
 	"fmt"
-	"os"
-	"io/ioutil"
 	"github.com/astaxie/beego"
 	"strconv"
 )
@@ -17,12 +15,9 @@ type WebServer struct {
 }
 
 func (c *BeeferController) Get() {
-	execDirAbsPath, _ := os.Getwd()
-	data, err := ioutil.ReadFile(execDirAbsPath + "/web/html/index.html")
-	if err != nil {
-		panic(err)
-	}
-	c.Ctx.WriteString(string(data))
+	c.Data["Website"] = "Bill Website"
+    c.Data["Email"] = "bill0119@gmail.com"
+    c.TplName = "html/index.html"
 }
 
 func init() {
@@ -35,6 +30,8 @@ func StartServer(conf *WebConfig) {
 	//router
 	beego.Router("/", &BeeferController{})
 
+	//static
+	beego.SetStaticPath("/js", "views/js")
 
 	beego.Run(":" + strconv.Itoa(conf.HttpPort))
 }

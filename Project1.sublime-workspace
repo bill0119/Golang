@@ -11,15 +11,32 @@
 			"file": "main.go",
 			"settings":
 			{
-				"buffer_size": 183,
+				"buffer_size": 188,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/control/webServer/config.go",
+			"file": "src/control/webServer/webServer.go",
 			"settings":
 			{
-				"buffer_size": 221,
+				"buffer_size": 829,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/control/control.go",
+			"settings":
+			{
+				"buffer_size": 253,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/control/config.go",
+			"settings":
+			{
+				"buffer_size": 139,
 				"line_ending": "Windows"
 			}
 		}
@@ -31,12 +48,20 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 0.0,
-		"last_filter": "",
+		"height": 104.0,
+		"last_filter": "Package Control: install",
 		"selected_items":
 		[
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Install Package Control"
+			]
 		],
-		"width": 0.0
+		"width": 400.0
 	},
 	"console":
 	{
@@ -59,10 +84,16 @@
 		"/E/github/Golang/Project1",
 		"/E/github/Golang/Project1/src",
 		"/E/github/Golang/Project1/src/control",
-		"/E/github/Golang/Project1/src/control/webServer"
+		"/E/github/Golang/Project1/src/github.com/beego",
+		"/E/github/Golang/Project1/src/github.com/beego/bee",
+		"/E/github/Golang/Project1/src/github.com/beego/bee/config",
+		"/E/github/Golang/Project1/views",
+		"/E/github/Golang/Project1/views/html"
 	],
 	"file_history":
 	[
+		"/C/Users/bill/AppData/Roaming/Sublime Text 3/Packages/User/Go.sublime-build",
+		"/C/Users/bill/AppData/Roaming/Sublime Text 3/Packages/GoSublime/CHANGELOG.md"
 	],
 	"find":
 	{
@@ -97,7 +128,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -106,7 +137,91 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 183,
+						"buffer_size": 188,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								183,
+								183
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Go/Go.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/control/webServer/webServer.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 829,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								381,
+								381
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/control/control.go",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 253,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								150,
+								150
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/control/config.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 139,
 						"regions":
 						{
 						},
@@ -119,41 +234,13 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Go/Go.sublime-syntax"
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/control/webServer/config.go",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 221,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								221,
-								221
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Go/Go.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -190,11 +277,15 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 243.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
 	},
-	"pinned_build_system": "",
+	"pinned_build_system": "Packages/User/Go.sublime-build",
 	"project": "Project1.sublime-project",
 	"replace":
 	{
@@ -236,7 +327,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 308.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

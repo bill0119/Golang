@@ -20,8 +20,8 @@ type WebServer struct {
 
 func (c *BeeferController) Get() {
 	c.Data["Website"] = "Bill Website"
-    c.Data["Email"] = "bill0119@gmail.com"
-    c.TplName = "html/index.html"
+    c.Data["Email"] = WebData.Email
+	c.TplName = "html/index.html"
 }
 
 func (c *APIController) Get() {
